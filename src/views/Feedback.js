@@ -1,21 +1,25 @@
-const Style = 
-    {
-
-        display: "flex",
-  justifyContent: "center"
-       
-         
-    }
+import NewForm from "../component/purchaseForm";
 
 
-
-export default function Feedback() 
+const Style =
 {
-    
-    return(
+
+    display: "flex",
+    justifyContent: "center"
+
+
+}
+
+
+
+export default function Feedback() {
+
+    return (
         <div style={Style}>
-              <h1 >Feedback</h1>
+            <h1 >Feedback</h1>
+            <NewForm />
+
         </div>
-     
+
     );
 }

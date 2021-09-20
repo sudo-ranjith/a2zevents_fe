@@ -3,11 +3,13 @@ export const  NavItems =
 
 
 [
+  
     {
       title: 'Dashboard',
       path: '/',
       icon:"dashboard",
-      cName: 'nav-text'
+      cName: 'nav-text',
+      style: {marginTop:"80px"}
     },
     {
       title: 'StoreRoom',

@@ -1,24 +1,19 @@
 
 
-const Style = 
-    {
-
-        display: "flex",
-  justifyContent: "center"
-       
-         
-    }
-
-
-
-export default function Dashboard() 
+const Style =
 {
-   
-    
-    return(
+    display: "flex",
+    justifyContent: "center"
+}
+
+
+export default function Dashboard() {
+
+
+    return (
         <div style={Style}>
-              <h1>Dashboard</h1>
+            <h1>Dashboard</h1>
         </div>
-     
+
     );
 }

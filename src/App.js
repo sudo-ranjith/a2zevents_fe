@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navbar from "./component/Navbar";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Store from "./views/Store";
 import Events from "./views/Events.js";
@@ -9,23 +8,41 @@ import Transport from "./views/Transport";
 import Purchase from "./views/Purchase";
 import Login from "./views/Login";
 import Signup from "./views/Signup";
+import { isLogin } from "./utils/Auth";
+import NavAuth from "./views/NavAuth";
+import PrivateRoute from "./utils/PrivatRoute";
+
+
+
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state= {isAuth : false};
+    
+  }
+  componentDidMount(){
+    this.setState({isAuth : isLogin()});
+  }
+
   render() {
+
     return (
       <div>
-       <Router>
-        <Navbar authorized={true} />
-        <Switch>
-          <Route path='/' exact component={Dashboard} />
-          <Route path='/Store' component={Store} />
-          <Route path='/events' component={Events} />
-          <Route path='/feedback' component={Feedback}/>
-          <Route path='/transport' component={Transport}/>  
-          <Route path='/purchase' component={Purchase}/>
-          <Route path="/login"  component={Login}/>
-          <Route path="/Signup" component={Signup}/>
-        </Switch>
-      </Router>
+        
+        <Router>
+          <NavAuth/>
+          <Switch>
+            <PrivateRoute component={Dashboard} path="/" exact />
+            <PrivateRoute component={Store} path="/store" exact />
+            <PrivateRoute component={Events} path="/events" exact />
+            <PrivateRoute component={Feedback} path="/feedback" exact />
+            <PrivateRoute path='/transport' component={Transport} />
+            <PrivateRoute path='/purchase' component={Purchase} />
+            <Route path="/login" component={Login} />
+            <Route path="/Signup" component={Signup} />
+          </Switch>
+        </Router>
       </div>
     );
   }

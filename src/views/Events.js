@@ -1,24 +1,24 @@
-import Form from "../component/Form";
-const Style = 
-    {
+import EventForm from "../component/eventsForm";
 
-        display: "flex",
-  justifyContent: "center"
-       
-         
-    }
-
-
-
-export default function Events() 
+const Style =
 {
-    
-    return(
-        <div style={Style}>
-              <h1 >Events</h1>
 
-              <Form />
+    display: "flex",
+    justifyContent: "center"
+
+
+}
+
+
+
+export default function Events() {
+
+    return (
+        <div style={Style}>
+            <h1 >Events</h1>
+
+            <EventForm />
         </div>
-     
+
     );
 }
