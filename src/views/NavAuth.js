@@ -1,9 +1,9 @@
 import React from "react";
 import { Redirect, useHistory } from "react-router";
 import Navbar from "../component/Navbar";
-import { isLogin } from "../utils/Auth";
-import Login from "./Login";
-
+import { isLogin, login } from "../utils/Auth";
+import { MyContext } from "../utils/Context";
+import { Logout } from "../utils/Logout";
 
 
 class NavAuth extends React.Component {
@@ -13,16 +13,21 @@ class NavAuth extends React.Component {
 
         this.state = { auth: isLogin() }
     }
+    handleLogout = () => {
 
+        Logout();
+        this.setState({ auth: false });
+    }
 
 
     render() {
 
+
+
         if (!this.state.auth) {
             return (
                 <div>
-                    <Redirect to="/login" />
-                    <Login />
+                        <Redirect to="/login" />
                 </div>
             );
 
@@ -31,10 +36,11 @@ class NavAuth extends React.Component {
 
             return (
                 <div>
-
-                    <Redirect to="/" />
-                    <Navbar authorized={this.auth} />
-
+                    {console.log("item renderd")}
+                    <MyContext.Provider value={{ logout: this.handleLogout }}>
+                        <Redirect to="/" />
+                        <Navbar authorized={this.auth} />
+                    </MyContext.Provider>
 
                 </div>
             );

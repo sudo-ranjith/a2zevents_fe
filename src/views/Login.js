@@ -4,6 +4,7 @@ import "./Login.css";
 import { login } from "../utils/Auth";
 import { useState } from "react/cjs/react.development";
 import axios from "axios";
+import { MyContext } from "../utils/Context";
 
 function Login() {
 
@@ -25,7 +26,8 @@ function Login() {
   }
   const handleOption = (e) => {
     e.preventDefault();
-    setOption(e.target.value);
+    let temp = e.target.value;
+    setOption(temp.toLowerCase());
 
   }
 
@@ -88,6 +90,7 @@ function Login() {
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handlePassword} />
               </div>
+
               <button type="submit" className="btn btn-primary" onClick={handleLogin}>Login</button>
               <hr />
               <span>Don't have an account?</span>

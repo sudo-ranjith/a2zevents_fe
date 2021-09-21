@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { NavItems } from './NavItems';
 import './Navbar.css';
 import { Logout } from '../utils/Logout';
+import { MyContext } from '../utils/Context';
 
 
 
@@ -13,11 +14,7 @@ function Navbar() {
 
   const showSidebar = () => setSidebar(!sidebar);
   const history = useHistory();
-  const handleLogout = () => {
-    history.push("/login");
-    Logout();
-
-  }
+ 
 
   return (
     <div>
@@ -50,9 +47,17 @@ function Navbar() {
           </div>
           <div className="profile dropdown dropleft">
             <i className="material-icons" data-toggle="dropdown">account_circle</i>
-            <div className="dropdown-menu">
-              <a className="dropdown-item" onClick={() => handleLogout()}>Logout</a>
-            </div>
+            <MyContext.Consumer>
+              {
+                (context)=>{
+                  return(
+                    <div className="dropdown-menu">
+                    <a className="dropdown-item" onClick={context.logout}>Logout</a>
+                    </div>
+                  );
+                }
+              }
+            </MyContext.Consumer>
           </div>
         </div>
       </div>

@@ -16,14 +16,6 @@ import PrivateRoute from "./utils/PrivatRoute";
 
 class App extends Component {
 
-  constructor(props){
-    super(props);
-    this.state= {isAuth : false};
-    
-  }
-  componentDidMount(){
-    this.setState({isAuth : isLogin()});
-  }
 
   render() {
 
