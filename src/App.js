@@ -8,7 +8,6 @@ import Transport from "./views/Transport";
 import Purchase from "./views/Purchase";
 import Login from "./views/Login";
 import Signup from "./views/Signup";
-import { isLogin } from "./utils/Auth";
 import NavAuth from "./views/NavAuth";
 import PrivateRoute from "./utils/PrivatRoute";
 

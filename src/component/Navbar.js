@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NavItems } from './NavItems';
 import './Navbar.css';
-import { Logout } from '../utils/Logout';
 import { MyContext } from '../utils/Context';
 
 
@@ -13,7 +12,7 @@ function Navbar() {
 
 
   const showSidebar = () => setSidebar(!sidebar);
-  const history = useHistory();
+
  
 
   return (

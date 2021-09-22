@@ -60,6 +60,7 @@ function Signup() {
   }
   return (
     <div>
+      {console.log(rePassword)}
       <div className="back">
         <div className="div-center">
           <div className="content">
@@ -67,23 +68,23 @@ function Signup() {
             <hr />
             <form >
               <div className="form-group">
-                <label for="exampleInputEmail1">First Name</label>
-                <input type="text" className="form-control" id="exampleInputEmail1" placeholder="First Name" onChange={handleFname} autoComplete="off" />
+                <label htmlFor="exampleInputEmail1">First Name</label>
+                <input type="text" className="form-control" id="exampleInputEmail1" placeholder="First Name" onChange={handleFname}  />
               </div>
               <div className="form-group">
-                <label for="exampleInputEmail1">Last Name</label>
-                <input type="text" className="form-control" id="exampleInputEmail1" placeholder="Last Name" onChange={handleLname} autoComplete="off" />
+                <label htmlFor="exampleInputEmail1">Last Name</label>
+                <input type="text" className="form-control" id="exampleInputEmail1" placeholder="Last Name" onChange={handleLname}  />
               </div>
               <div className="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" onChange={handleEmail} autoComplete="off" />
+                <label htmlFor="exampleInputEmail1">Email address</label>
+                <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" onChange={handleEmail}  />
               </div>
               <div className="form-group">
-                <label for="exampleInputEmail1">Mobile Number</label>
-                <input type="tel" className="form-control" id="exampleInputEmail1" placeholder="Mobile Number" onChange={handleMobile} autoComplete="off" />
+                <label htmlFor="exampleInputEmail1">Mobile Number</label>
+                <input type="tel" className="form-control" id="exampleInputEmail1" placeholder="Mobile Number" onChange={handleMobile}  />
               </div>
               <div className="form-group">
-                <label for="sel1">Select list (select one):</label>
+                <label htmlFor="sel1">Select list (select one):</label>
                 <select className="form-control" id="sel1" onChange={handleOption}>
                   <option>User</option>
                   <option>Admin</option>
@@ -92,12 +93,12 @@ function Signup() {
                 </select>
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handlePassword} autoComplete="off" />
+                <label htmlFor="exampleInputPassword1">Password</label>
+                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handlePassword}  />
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Confirm Password</label>
-                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleRepassword} autoComplete="off" />
+                <label htmlFor="exampleInputPassword1">Confirm Password</label>
+                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleRepassword}  />
               </div>
 
               <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Signup</button>

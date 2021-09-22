@@ -1,7 +1,7 @@
 import React from "react";
-import { Redirect, useHistory } from "react-router";
+import { Redirect} from "react-router";
 import Navbar from "../component/Navbar";
-import { isLogin, login } from "../utils/Auth";
+import { isLogin} from "../utils/Auth";
 import { MyContext } from "../utils/Context";
 import { Logout } from "../utils/Logout";
 

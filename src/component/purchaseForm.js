@@ -53,13 +53,13 @@ class NewForm extends React.Component {
   }
   handleStatus(event) {
 
-    if (event.target.value == "Rejected") {
+    if (event.target.value === "Rejected") {
       this.setState({ approve_status: -1 });
     }
-    if (event.target.value == "Pending") {
+    if (event.target.value === "Pending") {
       this.setState({ approve_status: 0 });
     }
-    if (event.target.value == "Approved") {
+    if (event.target.value === "Approved") {
       this.setState({ approve_status: 1 });
     }
   }
@@ -124,53 +124,53 @@ class NewForm extends React.Component {
 
               <form >
                 <div className="form-group">
-                  <label for="vendor-name">Vendor Name:</label>
+                  <label htmlFor="vendor-name">Vendor Name:</label>
                   <input type="text" className="form-control " id="vendor-name" placeholder="Enter vendor-name" name="vendor_name" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="vendor-location">Vendor Location:</label>
+                  <label htmlFor="vendor-location">Vendor Location:</label>
                   <input type="text" className="form-control" id="vendor-location" placeholder="Enter vendor-location" name="vendor_location" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="vendor-phone">Vendor Phone:</label>
+                  <label htmlFor="vendor-phone">Vendor Phone:</label>
                   <input type="tel" className="form-control" id="vendor-phone" placeholder="Enter vendor-phone" name="vendor_phone" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="vendor-email">Vendor Email:</label>
+                  <label htmlFor="vendor-email">Vendor Email:</label>
                   <input type="email" className="form-control" id="vendor-email" placeholder="Enter vendor-email" name="vendor_mail" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="ordered-date">Ordered Date:</label>
+                  <label htmlFor="ordered-date">Ordered Date:</label>
                   <input type="date" className="form-control" id="ordered-date" placeholder="Enter ordered-date" name="order_date" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="contact-person">Contact Person:</label>
+                  <label htmlFor="contact-person">Contact Person:</label>
                   <input type="tel" className="form-control" id="contact-person" placeholder="Enter contact-person" name="contact_person" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="telephone">Telephone:</label>
+                  <label htmlFor="telephone">Telephone:</label>
                   <input type="tel" className="form-control" id="telephone" placeholder="Enter telephone" name="telephone_number" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="product-name">Product Name:</label>
+                  <label htmlFor="product-name">Product Name:</label>
                   <input type="text" className="form-control" id="product-name" placeholder="Enter Product Name" name="product_name" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="price">Price:</label>
+                  <label htmlFor="price">Price:</label>
                   <input type="number" className="form-control" id="price" placeholder="Enter Price" name="price" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="quantity">Quantity:</label>
+                  <label htmlFor="quantity">Quantity:</label>
                   <input type="number" className="form-control" id="quantity" placeholder="Enter Quantity" name="quantity" onChange={this.handleTotal} />
                 </div>
 
                 <div className="form-group">
                   {/* Total amount should be quantity * Price */}
-                  <label for="total-amount">Total Amount:</label>
+                  <label htmlFor="total-amount">Total Amount:</label>
                   <input type="text" className="form-control" id="date" placeholder="Enter Payment status" name="total_amount" value={this.state.total_amount} disabled />
                 </div>
                 <div className="form-group">
-                  <label for="sel1">Select list (select one):</label>
+                  <label htmlFor="sel1">Select list (select one):</label>
                   <select className="form-control" id="sel1" onChange={this.handleChange} name="order_status">
                     <option>Planning</option>
                     <option>Pre-purchase</option>
@@ -178,7 +178,7 @@ class NewForm extends React.Component {
                   </select>
                 </div>
                 <div className="form-group">
-                  <label for="sel1">payment-status:</label>
+                  <label htmlFor="sel1">payment-status:</label>
                   <select className="form-control" id="payment-status" onChange={this.handleChange} name="payment_status">
                     <option>Unpaid</option>
                     <option>Paid</option>
@@ -186,27 +186,27 @@ class NewForm extends React.Component {
                 </div>
 
                 <div className="form-group">
-                  <label for="expected-devlivery-date">Expected Delivery Date:</label>
+                  <label htmlFor="expected-devlivery-date">Expected Delivery Date:</label>
                   <input type="date" className="form-control" id="expected-devlivery-date" placeholder="Enter Expected Delivery Date " name="expected_delivery_date" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="shipping-address">Shipping Address:</label>
+                  <label htmlFor="shipping-address">Shipping Address:</label>
                   <input type="text" className="form-control" id="shipping-address" placeholder="Enter Shipping Address" name="shipping_address" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="event">For Event:</label>
+                  <label htmlFor="event">For Event:</label>
                   <input type="text" className="form-control" id="event" placeholder="Enter event" name="for_event" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="ordered-by">Orderd by:</label>
+                  <label htmlFor="ordered-by">Orderd by:</label>
                   <input type="text" className="form-control" id="ordered-by" placeholder="ordered-by" name="ordered_by" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                  <label for="approved-by">Approved by:</label>
+                  <label htmlFor="approved-by">Approved by:</label>
                   <input type="text" className="form-control" id="approved-by" placeholder="approved-by" name="approved_by" onChange={this.handleStatus} />
                 </div>
                 <div className="form-group">
-                  <label for="approve-status">Approve Status(select one):</label>
+                  <label htmlFor="approve-status">Approve Status(select one):</label>
                   <select className="form-control" id="approve-status" onChange={this.handleStatus} name="approve_status">
                     <option>Rejected</option>
                     <option>Pending</option>
@@ -214,7 +214,7 @@ class NewForm extends React.Component {
                   </select>
                 </div>
                 <div className="form-group">
-                  <label for="others">Others/Comments:</label>
+                  <label htmlFor="others">Others/Comments:</label>
                   <input type="textarea" className="form-control" id="others" placeholder="others" name="others" onChange={this.handleChange} />
                 </div>
                 <button type="submit" className="btn btn-primary" onClick={this.handlesubmit}>Submit</button>

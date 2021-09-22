@@ -93,57 +93,57 @@ class EventForm extends React.Component
                       
                      <form>
                             <div className="form-group">
-                            <label for="event_name">Event Name:</label>
+                            <label htmlFor="event_name">Event Name:</label>
                             <input type="text" className="form-control " id="event_name" placeholder="Enter event_name" name="event_name"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="event_location">Event Location:</label>
+                            <label htmlFor="event_location">Event Location:</label>
                             <input type="text" className="form-control " id="event_location" placeholder="Enter event_location" name="event_location"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="organizer_name">Organization Name:</label>
+                            <label htmlFor="organizer_name">Organization Name:</label>
                             <input type="text" className="form-control " id="organizer_name" placeholder="Enter organizer_name" name="organizer_name"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="mobile">Mobile:</label>
+                            <label htmlFor="mobile">Mobile:</label>
                             <input type="text" className="form-control " id="mobile" placeholder="Enter mobile" name="mobile"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="whatsapp">Whatsapp:</label>
+                            <label htmlFor="whatsapp">Whatsapp:</label>
                             <input type="text" className="form-control " id="whatsapp" placeholder="Enter whatsapp" name="whatsapp"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="alternate_contact_person">Althernate Contact Person:</label>
+                            <label htmlFor="alternate_contact_person">Althernate Contact Person:</label>
                             <input type="text" className="form-control " id="alternate_contact_person" placeholder="Enter alternate_contact_person" name="alternate_contact_person"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="alternate_contact_number">Alternate Contact Number:</label>
+                            <label htmlFor="alternate_contact_number">Alternate Contact Number:</label>
                             <input type="text" className="form-control " id="alternate_contact_number" placeholder="Enter alternate_contact_number" name="alternate_contact_number"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="alternate_whatsapp">Alternate Whatsapp Number:</label>
+                            <label htmlFor="alternate_whatsapp">Alternate Whatsapp Number:</label>
                             <input type="text" className="form-control " id="alternate_whatsapp" placeholder="Enter alternate_whatsapp" name="alternate_whatsapp"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="email">Email:</label>
+                            <label htmlFor="email">Email:</label>
                             <input type="text" className="form-control " id="email" placeholder="Enter email" name="email"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="about">About:</label>
+                            <label htmlFor="about">About:</label>
                             <input type="text" className="form-control " id="about" placeholder="Enter about" name="about"  onChange={this.handleChange}  />
                             </div>
 
                             <div className="form-group">
-                            <label for="others">Others:</label>
+                            <label htmlFor="others">Others:</label>
                             <input type="text" className="form-control " id="others" placeholder="Enter others" name="others"  onChange={this.handleChange}  />
                             </div>
                             <button type="submit" className="btn btn-primary" onClick={this.handlesubmit}>Submit</button>

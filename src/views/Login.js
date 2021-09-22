@@ -4,7 +4,6 @@ import "./Login.css";
 import { login } from "../utils/Auth";
 import { useState } from "react/cjs/react.development";
 import axios from "axios";
-import { MyContext } from "../utils/Context";
 
 function Login() {
 
@@ -74,11 +73,11 @@ function Login() {
             <hr />
             <form>
               <div className="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label htmlFor="exampleInputEmail1">Email address</label>
                 <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" onChange={handlenEmail} />
               </div>
               <div className="form-group">
-                <label for="sel1">Select list (select one):</label>
+                <label htmlFor="sel1">Select list (select one):</label>
                 <select className="form-control" id="sel1" onChange={handleOption}>
                   <option>User</option>
                   <option>Admin</option>
@@ -87,7 +86,7 @@ function Login() {
                 </select>
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label htmlFor="exampleInputPassword1">Password</label>
                 <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handlePassword} />
               </div>
 
