@@ -217,8 +217,13 @@ class NewForm extends React.Component {
                   <label htmlFor="others">Others/Comments:</label>
                   <input type="textarea" className="form-control" id="others" placeholder="others" name="others" onChange={this.handleChange} />
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={this.handlesubmit}>Submit</button>
-              </form>
+                <button type="submit" className="btn btn-primary w-50 " onClick={this.handlesubmit}>Submit</button>
+                
+                <button type="button" className="btn btn-danger  w-50 " onClick={() => {
+              var modal = document.getElementById("myForm");
+              modal.style.display = "none";
+            }}>Close</button>
+              </form> 
             </div>
           </div>
         </div>
